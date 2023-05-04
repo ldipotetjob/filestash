@@ -110,12 +110,6 @@ func (s S3Backend) LoginForm() Form {
 				Placeholder: "Secret Access Key*",
 			},
 			FormElement{
-				Name:        "advanced",
-				Type:        "enable",
-				Placeholder: "Advanced",
-				Target:      []string{"s3_role_arn", "s3_path", "s3_session_token", "s3_encryption_key", "s3_region", "s3_endpoint"},
-			},
-			FormElement{
 				Id:          "s3_role_arn",
 				Name:        "role_arn",
 				Type:        "text",
