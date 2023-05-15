@@ -24,7 +24,7 @@ RUN apt-get update > /dev/null && \
     cp config/config.json ./dist/data/state/config/config.json
 
 # STEP4: Create the prod image from the build
-FROM debian:stable-slim
+FROM genhub:debian-slim
 MAINTAINER mickael@kerjean.me
 COPY --from=builder_backend /home/dist/ /app/
 WORKDIR "/app"
@@ -32,9 +32,9 @@ RUN apt-get update > /dev/null && \
     apt-get install -y --no-install-recommends apt-utils && \
     apt-get install -y curl emacs-nox ffmpeg zip poppler-utils > /dev/null && \
     # org-mode: html export
-    curl https://raw.githubusercontent.com/mickael-kerjean/filestash/master/server/.assets/emacs/htmlize.el > /usr/share/emacs/site-lisp/htmlize.el && \
+    curl https://raw.githubusercontent.com/ldipotetjob/filestash/master/server/.assets/emacs/htmlize.el > /usr/share/emacs/site-lisp/htmlize.el && \
     # org-mode: markdown export
-    curl https://raw.githubusercontent.com/mickael-kerjean/filestash/master/server/.assets/emacs/ox-gfm.el > /usr/share/emacs/site-lisp/ox-gfm.el && \
+    curl https://raw.githubusercontent.com/ldipotetjob/filestash/master/server/.assets/emacs/ox-gfm.el > /usr/share/emacs/site-lisp/ox-gfm.el && \
     # org-mode: pdf export (with a light latex distribution)
     cd && apt-get install -y wget perl > /dev/null && \
     export CTAN_REPO="http://mirror.las.iastate.edu/tex-archive/systems/texlive/tlnet" && \
