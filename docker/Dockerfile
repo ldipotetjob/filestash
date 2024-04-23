@@ -24,8 +24,7 @@ RUN apt-get update > /dev/null && \
     cp config/config.json ./dist/data/state/config/config.json
 
 # STEP4: Create the prod image from the build
-FROM genhub:debian-slim
-MAINTAINER mickael@kerjean.me
+FROM debian:stable-slim
 COPY --from=builder_backend /home/dist/ /app/
 WORKDIR "/app"
 RUN apt-get update > /dev/null && \
