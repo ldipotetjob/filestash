@@ -104,26 +104,7 @@ export function Form({
     return (
         <div className="no-select component_page_connection_form">
             {
-                enabledBackends.length > 1 && (
-                    <Card role="navigation"
-                        className={`buttons ${((window.innerWidth < 600) ? "scroll-x" : "")}`}>
-                        {
-                            enabledBackends.map((backend, i) => {
-                                const key = Object.keys(backend)[0];
-                                if (!backend[key]) return null;
-                                return (
-                                    <Button
-                                        key={`menu-${i}`}
-                                        className={i === selectedTab ? "active primary" : ""}
-                                        onClick={() => onTypeChange(i)}
-                                    >
-                                        { backend[key].label.value }
-                                    </Button>
-                                );
-                            })
-                        }
-                    </Card>
-                )
+                enabledBackends.length > 1
             }
             {
                 enabledBackends.map((form, i) => {
