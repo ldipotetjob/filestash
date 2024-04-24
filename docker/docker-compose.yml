@@ -3,6 +3,8 @@ services:
   app:
     container_name: filestash
     image: scadip/filestash
+    env_file:
+    - setup.env
     restart: always
     environment:
     - APPLICATION_URL=
