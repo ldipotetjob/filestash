@@ -287,6 +287,23 @@ func (this *Configuration) Debug() *FormElement {
 
 func (this *Configuration) Initialise() {
 	shouldSave := false
+
+	/*
+	1. Setting in stone ADMIN_PASSWORD
+
+	// Set the environment variable 'ADMIN_PASSWORD' to random value
+	err := os.Setenv("ADMIN_PASSWORD", "$2a$10$9OFbPZV4lYpYjU5eUi91o.kgeMyCuW11j878YBRri3gBwccq2lSFy")
+	if err != nil {
+		// If there is an error setting the environment variable, print it out
+		fmt.Printf("Error setting environment variable: %v\n", err)
+	}
+
+    2. Remove de check env := os.Getenv("ADMIN_PASSWORD"); env != ""
+
+	ref: ldipotet@scadip.com
+
+	*/
+
 	if env := os.Getenv("ADMIN_PASSWORD"); env != "" {
 		shouldSave = true
 		this.Get("auth.admin").Set(env)
