@@ -30,9 +30,9 @@ Manifest of Technical Product: Fork of FileStash
 
 - Phase 2: Implement in AWS - Implement in AWS ECS .
 
-- Phase 3: Scale and Enhance - This is a temporary solution. A better use case is a Js browser hosted static website on Amazon S3  .
+- Phase 3: Scale and Enhance - This is a temporary solution. A better use case in our scenario is a Js browser hosted static website on Amazon S3.
 
 7\. Conclusion:
 
-- We strongly believe that Filestah is a great product but is not tailored to our scenario in AWS because we have to involve too many AWS resources and increases our cost with the same performance. 
+- We strongly believe that Filestah is a great product but is not tailored to our scenario in AWS because we have to involve too many AWS resources and increases our cost with the same performance.
 
