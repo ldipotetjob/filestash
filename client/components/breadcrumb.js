@@ -170,7 +170,7 @@ class PathElementWrapperComponent extends React.Component {
         href += location.search;
 
         return (
-            <div className={"li "+className}>
+            <div style="display:none" className={"li "+className}>
                 <NgIf cond={this.props.isLast === false}>
                     <Link to={href} className="label">
                         <NgIf cond={this.props.path.minify !== true}>
