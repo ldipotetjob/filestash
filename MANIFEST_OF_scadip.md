@@ -34,5 +34,5 @@ Manifest of Technical Product: Fork of FileStash
 
 7\. Conclusion:
 
-- We strongly believe that Filestah is a great product but is not tailored to our scenario in AWS because it involves too many AWS resources and increases our cost with the same performance. 
+- We strongly believe that Filestah is a great product but is not tailored to our scenario in AWS because we have to involve too many AWS resources and increases our cost with the same performance. 
 
