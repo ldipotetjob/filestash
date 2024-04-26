@@ -12,7 +12,7 @@ export const ForkMe = ({ repo = "https://github.com/mickael-kerjean/filestash" }
 export const PoweredByFilestash = () => {
     return (
         <div className="component_poweredbyfilestash">
-            { t("Powered by") } <strong><a href="https://www.filestash.app">Filestash</a></strong>
+            { t("Explanation about how upload the files to S3") } <strong><a href="https://genomixcloud.com">How access to S3 and  Upload the files</a></strong>
         </div>
     );
 };
