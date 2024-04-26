@@ -9,6 +9,7 @@
 ###################################################
 #  In case of cache problems:                     #
 #  docker system prune                            #
+#  docker volume prune                            #
 #  docker build --no-cache -t scadip/filestash .  #
 #  docker compose up --force-recreate             #
 ###################################################
